@@ -48,7 +48,7 @@ jobs:
       - name: '运行 【youth_read_bu_2】'
         if: env.YOUTH_READ_BU_2
         run: |
-          node youth/youth_read_bu.js
+          node youth/Youth/youth_read_bu.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ_BU_2 }} 
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
@@ -62,7 +62,7 @@ jobs:
       - name: '运行 【youth_read_bu_3】'
         if: env.YOUTH_READ_BU_3
         run: |
-          node youth/youth_read_bu.js
+          node youth/Youth/youth_read_bu.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ_BU_3 }} 
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
@@ -76,7 +76,7 @@ jobs:
       - name: '运行 【youth_read_bu_4】'
         if: env.YOUTH_READ_BU_4
         run: |
-          node youth/youth_read_bu.js
+          node youth/Youth/youth_read_bu.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ_BU_4 }} 
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
