@@ -31,7 +31,7 @@ jobs:
         run: |
           npm install
           
-      - name: '运行 【youth_read_sam_1】'
+      - name: '运行 【youth_read_bu_1】'
         if: env.YOUTH_READ_BU_1
         run: |
           node youth/youth_read_bu.js
