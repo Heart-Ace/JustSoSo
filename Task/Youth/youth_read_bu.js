@@ -4,7 +4,7 @@
 
 //let s = 30000 //等待延迟30s
 const $ = new Env("【youth_read_bu】")
-const notify = $.isNode() ? require('./sendNotify') : '';
+const notify = $.isNode() ? require('/home/runner/work/JustSoSo/JustSoSo/Task/Youth/sendNotify') : '';
 let ReadArr = [], YouthBody = "",readscore = 0;
   if (process.env.YOUTH_READ && process.env.YOUTH_READ.indexOf('&') > -1) {
   YouthBody = process.env.YOUTH_READ.split('&');
