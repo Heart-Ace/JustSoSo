@@ -25,7 +25,7 @@ jobs:
         run: |
           npm install
       - name: '运行 【步步宝】'
-        if: env. JRTTSIGNURL
+        if: env. BBB_bububaoTOKEN
         run: |
           node Task/bububao/bububao.js
         env:
