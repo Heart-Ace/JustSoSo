@@ -58,7 +58,7 @@ http-response https:\/\/bububao\.duoshoutuan\.com\/user\/* script-path=https://r
 
 const $ = Env("步步宝");
 $.idx = ($.idx = ($.getval('bububaoSuffix') || '1') - 1) > 0 ? ($.idx + 1 + '') : ''; // 账号扩展字符
-const notify = $.isNode() ? require("./sendNotify") : ``;
+const notify = $.isNode() ? require("../sendNotify") : ``;
 const COOKIE = $.isNode() ? require("./bububaoCOOKIE") : ``;
 const logs = 0; // 0为关闭日志，1为开启
 const notifyttt = 1 // 0为关闭外部推送，1为12 23 点外部推送
@@ -69,7 +69,7 @@ let bububaotokenVal = ``;
 let middlebububaoTOKEN = [];
 if ($.isNode()) {
     // 没有设置 FL_DHCASH 则默认为 0 不兑换
-    CASH = process.env.BBB_CASH || 0;
+    CASH = process.env.BBB_CASH || 888;
 }
 if ($.isNode() && process.env.BBB_bububaoTOKEN) {
     COOKIES_SPLIT = process.env.COOKIES_SPLIT || "\n";
