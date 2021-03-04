@@ -25,7 +25,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【悦动族】'
+      - name: '运行 【全民悦动】'
         if: env. QMYD_qmydTOKEN
         run: |
           node Task/qmyd/qmyd.js
