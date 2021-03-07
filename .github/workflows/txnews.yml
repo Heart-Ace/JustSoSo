@@ -34,7 +34,7 @@ jobs:
       - name: '运行 【腾讯新闻】'
         if: env.TXNEWS_COOKIE
         run: |
-          node Task/txnews.js
+          node Task/txnews/txnews.js
         env:
           TZ: Asia/shanghai
           PUSH_KEY: ${{ secrets.PUSH_KEY}}
