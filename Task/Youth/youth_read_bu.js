@@ -8,7 +8,7 @@ Github Actions使用方法见[@lxk0301](https://raw.githubusercontent.com/lxk030
 
 */
 
-const $ = new Env("【youth_read_rl】")
+const $ = new Env("【youth_read_bu】")
 //const notify = $.isNode() ? require('../sendNotify') : '';
 let ReadArr = [], timebodyVal ="";
 let YouthBody = $.getdata('youth_autoread')||$.getdata("zqgetbody_body");
