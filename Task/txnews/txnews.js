@@ -6,7 +6,7 @@
 
 */
 const $ = new Env('腾讯新闻');
-const notify = $.isNode() ? require('./sendNotify') : '';
+const notify = $.isNode() ? require('../sendNotify') : '';
 let notifyInterval =$.getdata('notifynum')||50; //阅读篇数间隔通知开为1，常关为0;
 
 let SignArr = [],SignUrl = "";
