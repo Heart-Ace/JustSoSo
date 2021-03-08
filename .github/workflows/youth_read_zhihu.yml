@@ -2,7 +2,7 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 
-name: youth_read_bu
+name: youth_read_zhihu
 
 on:
   workflow_dispatch:
@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        YOUTH_READ_BU_1: ${{ secrets.YOUTH_READ_ZHIHU_1 }}
-        YOUTH_READ_BU_2: ${{ secrets.YOUTH_READ_ZHIHU_2 }}
-        YOUTH_READ_BU_3: ${{ secrets.YOUTH_READ_ZHIHU_3 }}
-        YOUTH_READ_BU_4: ${{ secrets.YOUTH_READ_ZHIHU_4 }}
+        YOUTH_READ_ZHIHU_1: ${{ secrets.YOUTH_READ_ZHIHU_1 }}
+        YOUTH_READ_ZHIHU_2: ${{ secrets.YOUTH_READ_ZHIHU_2 }}
+        YOUTH_READ_ZHIHU_3: ${{ secrets.YOUTH_READ_ZHIHU_3 }}
+        YOUTH_READ_ZHIHU_4: ${{ secrets.YOUTH_READ_ZHIHU_4 }}
         TZ: Asia/shanghai
     steps:
       - name: Checkout
@@ -46,7 +46,7 @@ jobs:
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           
       - name: '运行 【youth_read_zhihu_2】'
-        if: env.YOUTH_READ_BU_2
+        if: env.YOUTH_READ_ZHIHU_2
         run: |
           node Task/Youth/youth_read_bu.js
         env:
@@ -60,7 +60,7 @@ jobs:
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           
       - name: '运行 【youth_read_zhihu_3】'
-        if: env.YOUTH_READ_BU_3
+        if: env.YOUTH_READ_ZHIHU_3
         run: |
           node Task/Youth/youth_read_zhihu.js
         env:
@@ -74,7 +74,7 @@ jobs:
           DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
           
       - name: '运行 【youth_read_zhihu_4】'
-        if: env.YOUTH_READ_BU_4
+        if: env.YOUTH_READ_ZHIHU_4
         run: |
           node Task/Youth/youth_read_zhihu.js
         env:
