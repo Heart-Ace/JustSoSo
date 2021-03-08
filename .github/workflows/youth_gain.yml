@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        YOUTH_START: ${{ secrets.YOUTH_START }}
-        YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
+        YOUTH_START_BU: ${{ secrets.YOUTH_START_BU }}
+        YOUTH_LOOK_BU: ${{ secrets.YOUTH_LOOK_BU }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -25,11 +25,11 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.YOUTH_START
+        if: env.YOUTH_START_BU
         run: |
           npm install
-      - name: '运行 【中青看点】'
-        if: env.YOUTH_START
+      - name: '运行 【中青看点BU】'
+        if: env.YOUTH_START_BU
         run: |
           node Task/Youth/youth_gain.js
         env:
