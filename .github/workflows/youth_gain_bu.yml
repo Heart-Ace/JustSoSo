@@ -31,7 +31,7 @@ jobs:
       - name: '运行 【中青看点BU】'
         if: env.YOUTH_START_BU
         run: |
-          node Task/Youth/youth_gain.js
+          node Task/Youth/youth_gain_bu.js
         env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
