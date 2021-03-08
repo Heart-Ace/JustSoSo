@@ -42,15 +42,15 @@ if (!$.isNode() && !lookbodys.indexOf("&") == -1) {
     LookBody = lookbodys.split('&');
   }
   if ($.isNode()) {
-    if (process.env.YOUTH_START && process.env.YOUTH_START.indexOf('&') > -1) {
-      StartBody = process.env.YOUTH_START.split('&');
+    if (process.env.YOUTH_START_BU && process.env.YOUTH_START_BU.indexOf('&') > -1) {
+      StartBody = process.env.YOUTH_START_BU.split('&');
     } else {
-      StartBody = [process.env.YOUTH_START]
+      StartBody = [process.env.YOUTH_START_BU]
     };
-    if (process.env.YOUTH_LOOK && process.env.YOUTH_LOOK.indexOf('&') > -1) {
-      LookBody = process.env.YOUTH_LOOK.split('&');
+    if (process.env.YOUTH_LOOK_BU && process.env.YOUTH_LOOK_BU.indexOf('&') > -1) {
+      LookBody = process.env.YOUTH_LOOK_BU.split('&');
     } else {
-      LookBody = [process.env.YOUTH_LOOK]
+      LookBody = [process.env.YOUTH_LOOK_BU]
     }
   }
   Object.keys(StartBody).forEach((item) =>{
