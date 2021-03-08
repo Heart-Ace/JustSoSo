@@ -29,7 +29,7 @@ jobs:
         run: |
           npm install
       - name: '运行 【中青看点HEART】'
-        if: env.YOUTH_START_BU
+        if: env.YOUTH_START_HEART
         run: |
           node Task/Youth/youth_gain_heart.js
         env:
