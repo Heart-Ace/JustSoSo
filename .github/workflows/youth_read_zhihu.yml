@@ -32,7 +32,7 @@ jobs:
           npm install
           
       - name: '运行 【youth_read_zhihu_1】'
-        if: env.YOUTH_READ_BU_1
+        if: env.YOUTH_READ_ZHIHU_1
         run: |
           node Task/Youth/youth_read_zhihu.js
         env:
@@ -48,7 +48,7 @@ jobs:
       - name: '运行 【youth_read_zhihu_2】'
         if: env.YOUTH_READ_ZHIHU_2
         run: |
-          node Task/Youth/youth_read_bu.js
+          node Task/Youth/youth_read_zhihu.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ_ZHIHU_2 }} 
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
