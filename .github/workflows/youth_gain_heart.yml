@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: youth_gain_heart
+name: youth_gain_bu
 
 on:
   workflow_dispatch:
@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        YOUTH_START_HEART: ${{ secrets.YOUTH_START_HEART }}
-        YOUTH_LOOK_HEART: ${{ secrets.YOUTH_LOOK_HEART }}
+        YOUTH_START_BU: ${{ secrets.YOUTH_START_BU }}
+        YOUTH_LOOK_BU: ${{ secrets.YOUTH_LOOK_BU }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -25,13 +25,13 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.YOUTH_START_HEART
+        if: env.YOUTH_START_BU
         run: |
           npm install
-      - name: '运行 【中青看点HEART】'
-        if: env.YOUTH_START_HEART
+      - name: '运行 【中青看点BU】'
+        if: env.YOUTH_START_BU
         run: |
-          node Task/Youth/youth_gain_heart.js
+          node Task/Youth/youth_gain_bu.js
         env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
