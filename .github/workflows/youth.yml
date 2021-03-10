@@ -18,6 +18,8 @@ jobs:
         YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
         YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}
         YOUTH_TIME: ${{ secrets.YOUTH_TIME }}
+        YOUTH_CASH_URL: ${{ secrets.YOUTH_CASH_URL }}
+        YOUTH_CASH_BODY: ${{ secrets.YOUTH_CASH_BODY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
