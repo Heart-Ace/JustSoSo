@@ -54,7 +54,7 @@ let SignArr = [],SignUrl = "";
     cookiesArr = [],CookieTxnews = "";
     VideoArr = [],SignUrl = "",order = "",
     detail = ``, subTitle = ``;
-let Account = ["【MiniSam】","【QF】","【RL】","【Sam】","【妞宝】","【JH】"];
+let Account = [];
 
 if ($.isNode()) {
   if (process.env.TXNEWS_COOKIE && process.env.TXNEWS_COOKIE.indexOf('&') > -1) {
