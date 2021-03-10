@@ -71,6 +71,20 @@ if (isGetCookie = typeof $request !== 'undefined') {
         readTimes = process.env.YOUTH_TIME.split('\n');
       } else {
         readTimes = [process.env.YOUTH_TIME]
+      };
+        if (process.env.YOUTH_CASH_URL && process.env.YOUTH_CASH_URL.indexOf('&') > -1) {
+        cashurl_zq = process.env.YOUTH_CASH_URL.split('&');
+      } else if (process.env.YOUTH_CASH_URL && process.env.YOUTH_CASH_URL.indexOf('\n') > -1) {
+        cashurl_zq = process.env.YOUTH_CASH_URL.split('\n');
+      } else {
+        cashurl_zq = [process.env.YOUTH_CASH_URL]
+      };
+        if (process.env.YOUTH_CASH_BODY && process.env.YOUTH_CASH_BODY.indexOf('&') > -1) {
+        cashbody_zq = process.env.YOUTH_CASH_BODY.split('&');
+      } else if (process.env.YOUTH_CASH_BODY && process.env.YOUTH_CASH_BODY.indexOf('\n') > -1) {
+        cashbody_zq = process.env.YOUTH_CASH_BODY.split('\n');
+      } else {
+        cashbody_zq = [process.env.YOUTH_CASH_BODY]
       }
     };
   Object.keys(cookieYouth).forEach((item) =>{
