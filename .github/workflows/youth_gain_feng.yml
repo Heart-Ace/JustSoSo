@@ -6,7 +6,7 @@ name: youth_gain_feng
 on:
   workflow_dispatch:
   schedule:
-     - cron: '2 11,14 * * *'
+     - cron: '2 6,12 * * *'
   watch:
     types: started
 
