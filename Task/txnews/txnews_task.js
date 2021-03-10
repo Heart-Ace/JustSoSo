@@ -1,11 +1,8 @@
 /*
 更新时间: 2021-01-23 07:46
-
 Github Actions使用方法见[@lxk0301](https://raw.githubusercontent.com/lxk0301/scripts/master/githubAction.md) 使用方法大同小异
-
 获取secrects方法和腾讯新闻签到任务相同，TX_CK即腾讯新闻Cookie，TX_READ即sy_signurl_txnews阅读任务地址，TX_VIDEO即video_txnews视频地址;其中TX_CK只能填一个账号secrects，其他链接地址可用#或换行隔开，多账号任务链接不可共用阅读和视频地址‼️
 拷贝抓包的请求体到下面Value的文本框中，本脚本不包含任何推送通知
-
 */
 
 const $ = new Env("腾讯新闻阅读")
