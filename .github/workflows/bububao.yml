@@ -3,7 +3,7 @@ name: bububao
 on:
   workflow_dispatch:
   schedule:
-     - cron: '8,28,48 0-16 * * *'
+     - cron: '*/30 * * * *'
   watch:
     types: started
 jobs:
@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        BBB_bububaoTOKEN: ${{ secrets. BBB_bububaoTOKEN }} 
-        BBB_CASH: ${{ secrets. BBB_CASH }} 
+        KKDHEADER: ${{ secrets. KKDHEADER }} 
+        KKDCOOKIE: ${{ secrets. KKDCOOKIE }} 
+        KKDSIGN: ${{ secrets. KKDSIGN }} 
         TZ: Asia/shanghai
     steps:
       - name: Checkout
@@ -25,10 +26,10 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【步步宝】'
-        if: env. BBB_bububaoTOKEN
+      - name: '运行 【快看点】'
+        if: env. KKDHEADER
         run: |
-          node Task/bububao/bububao.js
+          node Task/kkd/kkd.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
